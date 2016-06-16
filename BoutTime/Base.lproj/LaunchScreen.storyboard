@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-Ks-zEh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="rwQ-kC-gEQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rwQ-kC-gEQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="a1W-Ks-zEh" secondAttribute="bottom" id="5Gy-py-JGx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="a1W-Ks-zEh" secondAttribute="leading" id="64y-ph-srs"/>
+                            <constraint firstItem="a1W-Ks-zEh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="H1f-PN-pAZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1W-Ks-zEh" secondAttribute="trailing" constant="-20" id="HNf-nf-iUc"/>
+                            <constraint firstItem="a1W-Ks-zEh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="XID-FN-pu1"/>
+                            <constraint firstItem="a1W-Ks-zEh" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="lCd-D0-VOy"/>
+                            <constraint firstItem="a1W-Ks-zEh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="oX2-eh-pYs"/>
+                            <constraint firstItem="a1W-Ks-zEh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="uHz-xK-0Kg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1W-Ks-zEh" secondAttribute="trailing" id="w6O-gA-rvn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="64y-ph-srs"/>
+                                <exclude reference="H1f-PN-pAZ"/>
+                                <exclude reference="XID-FN-pu1"/>
+                                <exclude reference="lCd-D0-VOy"/>
+                                <exclude reference="w6O-gA-rvn"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="136" y="386"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_screen.png" width="1333" height="2366"/>
+    </resources>
 </document>
